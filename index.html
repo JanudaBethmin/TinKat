@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>tinKat</title>
+ <!-- Adding a favicon to the website -->
+  <link rel="icon" href="images/favicon.ico">
+
+  <!-- Google Fonts -->
+  <!-- Adding Ubuntu and montserrat fonts from Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat|Ubuntu" rel="stylesheet">
+
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Font Awesome -->
+    <!-- Linking fontawesome.com site to the page. This adds icons ( apple, google play.....) to the website.-->
+  <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+
+  <!-- Bootstrap Scripts -->
+  <!--We can quickly add Bootstap though this link on their website.
+  Css styles are applied in the linked order. So if we need to overwrite Bootstrap CSS Bootstraps link must go above the local css file link. -->
+  <!--Many of Bootstraps components require the use of JavaScript to function because it is responsible for behavior.
+  We can include every Bootstrap JavaScript plugin and dependency with one of their two bundles in the website.-->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+  <section class="colored-section" id="title">
+
+    <!-- container: Max width of the div changes, when we go from lap <-> tab <-> phone. thsi is bit jumpy -->
+    <!-- container-fluid : Width of the div continue to be 100%, when we change the size of the screen. (any size)-->
+    <!-- We can add more CSS, and personalize this to add paddings and center the content inside it.-->
+
+    <div class="container-fluid">
+
+      <!-- Nav Bar -->
+
+      <nav class="navbar navbar-expand-lg navbar-dark">
+
+        <a class="navbar-brand" href="">tinKat</a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <!-- we can use a Id as a href (href="#idname"). because we gave a ID to every section. We can use them to navigate to the sections of our website using the navigation bar. -->
+              <a class="nav-link" href="#footer">Contact</a>
+            </li>
+            <li class="nav-item">
+              <!-- we can use a Id as a href (href="#idname"). because we gave a ID to every section. We can use them to navigate to the sections of our website using the navigation bar. -->
+              <a class="nav-link" href="#pricing">Pricing</a>
+            </li>
+            <li class="nav-item">
+              <!-- we can use a Id as a href (href="#idname"). because we gave a ID to every section. We can use them to navigate to the sections of our website using the navigation bar. -->
+              <a class="nav-link" href="#cta">Download</a>
+            </li>
+          </ul>
+
+        </div>
+      </nav>
+
+
+      <!-- Title -->
+
+      <!--
+Website in,
+laptop size(large) or bigger screen - col-lg-6 - 6 columns per row(12/2) (A single column get 50% width of the screen)
+In other lower sizers, all ther columns will automatically get the 100% width of the screen
+-->
+
+      <div class="row">
+
+        <div class="col-lg-6">
+          <h1 class="big-heading">Meet new and interesting cats nearby.</h1>
+          <!--added the fontawesome.com's apple icon and kept a space between and the text. (Otherwise they will look like they are glued)-->
+          <a href="https://www.apple.com/"><button class="download-button btn btn-lg btn-dark" type="button"><i class="fab fa-apple"></i> Download</button></a>
+          <!--added the fontawesome.com's apple icon and kept a space between and the text. (Otherwise they will look like they are glued)-->
+        <a href="https://play.google.com/store/apps"><button class="download-button btn btn-lg btn-outline-light" type="button"><i class="fab fa-google-play"></i> Download</button></a>
+        </div>
+
+        <div class="col-lg-6">
+          <img class="title-image" src="images/cat-selfie.png" alt="iphone-mockup">
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- Features -->
+
+  <section class="white-section" id="features">
+
+    <div class="container-fluid">
+
+      <div class="row">
+        <div class="feature-box col-lg-4">
+          <i class="icon fas fa-check-circle fa-4x"></i><!-- We can add classes given in the fontawesome.com to style, size.. icons further like Bootstrap.(fa-3x) -->
+          <h3 class="feature-title">Easy to use.</h3>
+          <p>So easy to use, even your cat could do it.</p>
+        </div>
+
+        <div class="feature-box col-lg-4">
+          <i class="icon fas fa-bullseye fa-4x"></i><!-- We can add classes given in the fontawesome.com to style, size.. icons further like Bootstrap.(fa-3x) -->
+          <h3 class="feature-title">Elite Clientele</h3>
+          <p>We have all the cats, the greatest cats.</p>
+        </div>
+
+        <div class="feature-box col-lg-4">
+          <i class="icon fas fa-heart fa-4x"></i><!-- We can add classes given in the fontawesome.com to style, size.. icons further like Bootstrap.(fa-3x) -->
+          <h3 class="feature-title">Guaranteed to work.</h3>
+          <p>Find the love of your cat's life or your money back.</p>
+        </div>
+      </div>
+
+
+    </div>
+  </section>
+
+
+  <!-- Testimonials -->
+
+  <section class="colored-section" id="testimonials">
+
+    <div id="testimonial-carousel" class="carousel slide" data-ride="false">
+      <div class="carousel-inner">
+        <!-- By adding container fluid class into the classes,this will only add the padding to the elements inside the carosel, and leaves the buttons without being padded.(outside) -->
+        <div class="carousel-item active container-fluid">
+          <h2 class="testimonial-text">I no longer have to sniff other cats for love. I've found the hottest Norwegian on tinKat. Meow!.</h2>
+          <img class="testimonial-image" src="images/cat-img.jpg" alt="dog-profile">
+          <em>Pebbles, New York</em>
+        </div>
+        <!-- By adding container fluid class into the classes,this will only add the padding to the elements inside the carosel, and leaves the buttons without being padded.(outside) -->
+        <div class="carousel-item container-fluid">
+          <h2 class="testimonial-text">My cats used to be so lonely, but with tinKat's help, they've found the love of their life. I think.</h2>
+          <img class="testimonial-image" src="images/lady-img.jpg" alt="lady-profile">
+          <em>Beverly, Illinois</em>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#testimonial-carousel" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span><!-- aria-hidden="true" - this will stop the screen reader, reading the names of the buttons. ( used by visualy paired persons)-->
+    <span class="visually-hidden">Previous</span><!-- without reading the names of button, just says Previous -->
+      </a>
+      <a class="carousel-control-next" href="#testimonial-carousel" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span><!-- aria-hidden="true" - this will stop the screen reader, reading the names of the buttons. ( used by visualy paired persons)-->
+    <span class="visually-hidden">Next</span><!-- without reading the names of button, just says Previous -->
+      </a>
+    </div>
+
+  </section>
+
+
+  <!-- Press -->
+
+<!-- If we use alt key and drag the same space in the elements that we want to add the same class. Then we can write in all elements at onece. This comes with a package we install in atom.*/-->
+  <section class="colored-section" id="press">
+    <img class="press-logo" src="images/techcrunch.png" alt="tc-logo">
+    <img class="press-logo" src="images/tnw.png" alt="tnw-logo">
+    <img class="press-logo" src="images/bizinsider.png" alt="biz-insider-logo">
+    <img class="press-logo" src="images/mashable.png" alt="mashable-logo">
+
+  </section>
+
+
+  <!-- Pricing -->
+
+  <section class="white-section" id="pricing">
+
+    <h2 class="section-heading">A Plan for Every Cat's Needs</h2>
+    <p>Simple and affordable price plans for your and your cat.</p>
+
+<!-- Bootstap class-group class will do the job, but it is not that responsive. So we can use bootstap grid system to make it responsive. -->
+    <div class="row">
+
+      <div class="pricing-column col-lg-4 col-md-6">
+        <div class="card">
+          <div class="card-header">
+            <h3>Ragdoll</h3>
+          </div>
+          <div class="card-body">
+            <h2 class="price-text">Free</h2>
+            <p>5 Matches Per Day</p>
+            <p>10 Messages Per Day</p>
+            <p>Unlimited App Usage</p>
+            <button class="btn btn-lg btn-block btn-outline-dark" type="button">Sign Up</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="pricing-column col-lg-4 col-md-6">
+        <div class="card">
+          <div class="card-header">
+            <h3>Persian</h3>
+          </div>
+          <div class="card-body">
+            <h2 class="price-text">$49 / mo</h2>
+            <p>Unlimited Matches</p>
+            <p>Unlimited Messages</p>
+            <p>Unlimited App Usage</p>
+            <button class="btn btn-lg btn-block btn-dark" type="button">Sign Up</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="pricing-column col-lg-4">
+        <div class="card">
+          <div class="card-header">
+            <h3>Ashera</h3>
+          </div>
+          <div class="card-body">
+            <h2 class="price-text">$99 / mo</h2>
+            <p>Pirority Listing</p>
+            <p>Unlimited Matches</p>
+            <p>Unlimited Messages</p>
+            <p>Unlimited App Usage</p>
+            <button class="btn btn-lg btn-block btn-dark" type="button">Sign Up</button>
+
+          </div>
+        </div>
+      </div>
+
+
+
+    </div>
+
+  </section>
+
+
+  <!-- Call to Action -->
+
+  <section class="colored-section" id="cta">
+
+    <div class="container-fluid">
+
+      <h3 class="big-heading">Find the True Love of Your Cat's Life Today.</h3>
+      <a href="https://www.apple.com/"><button class="download-button btn btn-lg btn-dark" type="button"><i class="fab fa-apple"></i> Download</button></a>
+      <a href="https://play.google.com/store/apps"><button class="download-button btn btn-lg btn-outline-light" type="button"><i class="fab fa-google-play"></i> Download</button></a>
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+
+  <footer class="white-section" id="footer">
+    <div class="container-fluid">
+      <a href="https://facebook.com"><i class="social-icon fab fa-facebook-f"></i></a>
+      <a href="https://twitter.com"><i class="social-icon fab fa-twitter"></i></a>
+      <a href="https://instagram.com"><i class="social-icon fab fa-instagram"></i></a>
+      <a href="https://gmail.com"><i class="social-icon fas fa-envelope"></i></a>
+
+
+
+      <p> © Januda Bethmin @ Copyright 2022 tinKat</p>
+    </div>
+  </footer>
+
+
+</body>
+
+</html>

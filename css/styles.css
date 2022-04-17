@@ -1,0 +1,214 @@
+
+body {
+  font-family: "Montserrat";
+  text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Montserrat-Bold";
+}
+
+p {
+  color: #8f8f8f;
+}
+
+/* Headings */
+
+.big-heading {
+  font-family: "Montserrat-Black";
+  font-size: 3.5rem;
+  line-height: 1.5;
+}
+
+.section-heading {
+  font-size: 3rem;
+  line-height: 1.5;
+}
+
+/* Containers */
+
+.container-fluid{
+  padding: 7% 15%;
+}
+
+/* Sections */
+
+.colored-section {
+  background-color: #ff4c68;
+  color: #fff;
+}
+
+.white-section {
+  /*We need to set the background colr white, because we need to hide the picture. Otherwise it is see through. But other times you don't have to use this.*/
+  background-color: #fff;
+}
+
+/* Navigation Bar */
+
+.navbar {
+  padding: 0 0 4.5rem;
+}
+
+.navbar-brand {
+  font-family: "Ubuntu";
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+/* We don't have to use rem because we have alredy maked it to be responsive using Bootstrap. */
+.nav-item {
+  padding: 0 18px;
+}
+
+.nav-link {
+  font-size: 1.2rem;
+  font-family: "Montserrat-Light";
+}
+
+/* Buttons */
+
+.download-button {
+  margin: 5% 3% 5% 0;
+}
+
+/* Title Section */
+
+#title {
+  background-color: #ff4c68;
+  color: #fff;
+  text-align: left;
+}
+
+#title .container-fluid {
+  padding: 3% 15% 7%;
+}
+
+/* Title Image */
+
+/* We can't set the z-index: -1; here because the picture will go behind the title section and disappere. So we have to change the z index of the features section instead of the image
+z-index: -1;*/
+/* We can use absolute positioning ( So it will not effect the other elements in the title section) to position the image correctly, aligning with the taskbar.*/
+
+.title-image {
+  width: 65%;
+  /*Rotating images in the website from 15 degrees
+  transform: rotate(25deg);*/
+  /*We can use absolute positioning ( So it will not effect the other elements in the title section) to position the image correctly, aligning with the taskbar.*/
+  position: absolute;
+  left: 40%;
+}
+
+/* Features Section */
+
+/* Z index
+There are many way we can position one element in to of one element,
+1. Nexting them (ex- nested divs)- child sits on top of parent
+2. Absolute positioning - we remove the element from the HTML flow. We can now position them using right, left, top, bottom values.
+(But when you position them the they will be positioned on top of each other aording to the HTML flow.
+The first element in the HTML file will be in the bottom while the last element will be on the top. Youc can use zindex to change the order)
+
+Default zindex of a element is o.
+The element must be positioned,in able to z index to work ( any position other that static - static is the defaul positioning). ( position: ...........;)
+*/
+
+#features {
+  /* We need it on the flow (not absolute), and dont want it to be static.
+  If we move the section up, becuase this is relative positioning, the space the element stood before ( the ghost of the element) will stay and show some part of the body of the webside outside*/
+  position: relative;
+  /* We can change the z index like below, and get the job done. But there is no need for that.
+  If there are two elements that is positioned in a HTML file, the one in the below of the HTML file will be on the top and the one in the above of the HTML file will be in the bottom of the website automatically.
+  Here we have features section below the cat-selfie in the HTML and both have a position( not static). So features section will be on top of cat-selfie in the website by default.
+  z-index: +1;*/
+}
+
+.feature-title {
+  font-size: 1.5rem;
+}
+
+.feature-box {
+  padding: 4.5%;
+}
+
+.icon {
+  color: #ef8172;
+  margin-bottom: 1rem;
+}
+
+.icon:hover {
+  color: #ff4c68;
+}
+
+/* Testimonial Section */
+
+/* When we design a website that doesn't have multiple pages but multiple sections, we have to change colurs each section.(color1-> white -> color2 -> white ... is queit beautiful)*/
+
+#testimonials {
+  /* padding: 7% 15% 5% 15%;
+  This will add the padding correctly, but this will push our buttons of the carosel inside.( becuase this padding was added to whole elements in the section.)
+  so we must add the padding only to the items that we want, and leave the buttons without being padded.(outside)*/
+  background-color: #ef8172;
+}
+
+.testimonial-text {
+  font-size: 3rem;
+  line-height: 1.5;
+}
+
+.testimonial-image {
+  width: 10%;
+  /* Giving a round frame to the image - this will be a circle if the picture was a square, otherwise it is oval */
+  border-radius: 100%;
+  margin: 20px;
+}
+
+
+#press {
+  background-color: #ef8172;
+  padding-bottom: 3%;
+}
+
+.press-logo {
+  width: 15%;
+  margin: 20px 20px 50px;
+}
+
+/* Pricing Section */
+
+#pricing {
+  padding: 100px;
+}
+
+.price-text {
+  font-size: 3rem;
+  line-height: 1.5;
+}
+
+.pricing-column {
+  padding: 3% 2%;
+}
+
+/* CTA Section */
+
+
+/* Footer Section */
+
+
+.social-icon {
+  margin: 20px 10px;
+}
+
+/*
+This is mostly used ( with max/min width,max/min height, resolution... ) to to make the website even more. After we use Bootstap, we often use media quaries to give the finishing touches to the website's responsiveness.
+You can really narrow down and make the website responsive exactly as you want using media quaries
+we can use media queries to add lot of other other styles for other actions too. ( print, screen ...)*/
+
+@media (max-width: 1028px) {
+
+  #title {
+    text-align: center;
+  }
+
+  .title-image {
+    position: static;
+  }
+}
